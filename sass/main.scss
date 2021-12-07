@@ -6,5 +6,14 @@
 @import "./base/base";
 @import "./base/typography";
 
+@import "./components/buttons";
+@import "./components/animation";
+
 @import "./layout/header";
-@import "./layout/nav";
+@import "./layout/infos";
+@import "./layout/functions";
+@import "./layout/restaurants";
+@import "./layout/footer";
+
+@import "./pages/menu";
+ 

@@ -1,0 +1,16 @@
+.button {
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    border-style: none;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    padding: 16px 25px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    
+}

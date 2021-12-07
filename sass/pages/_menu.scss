@@ -1,0 +1,86 @@
+.main-menu {
+    width : 100%;
+    background-color: $background-light-gray;
+    & img {
+        width: 100%;
+        object-fit: cover;
+    }
+    &__dishes {
+        padding: 0 25px;
+        background-color: $background-light-gray;  
+        border-radius: 45px 45px 0 0;
+        position: relative;
+        top : -60px;
+        margin-bottom: -60px;
+        &__header {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 25px;
+            padding-top: 30px;
+            padding-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            & div {
+                display: flex;
+                align-items: center;
+            }
+            & div i:first-child {
+                color: black;
+                position: absolute;
+                right: 0;
+                z-index: 1;
+            }
+            & div i:last-child {
+                color: transparent;
+                transform-origin: 50% 50%;
+                overflow: hidden;
+            }
+        } 
+        &__step {
+            margin-bottom: 30px;
+            &__rectangle {
+                    width: 40px;
+                    height: 3px;
+                    background: $colour-tertiary;
+                    margin-bottom: 15px;
+            }
+            &__dish {
+                cursor: pointer;
+                position: relative;
+                padding: 12px;
+                padding-right: 60px;
+                @include bordershadows;
+                border-radius: 15px;
+                margin-bottom: 15px;
+                & h4:first-child {
+                    margin-bottom: 5px;
+                }
+                & h4:last-child {
+                    position: absolute;
+                    right: 20px;
+                    bottom : 12px;
+                }
+                & h5 {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+        &__step > p {
+            text-transform: uppercase;
+            font-weight: 300;
+            position: relative;  
+            margin-bottom: 7px;    
+            }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        & .button {
+            margin-top: 0;
+        }
+    }
+    }
+}

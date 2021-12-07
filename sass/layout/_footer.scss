@@ -1,0 +1,22 @@
+.footer {
+    color: white;
+    background-color: $text-gray;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    & ul {
+        list-style-type: none;
+        font-size: 18px;
+        & li:first-child {
+            font-family: $font-family-logo;
+            padding-bottom: 16px;
+        }
+        & li {
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.rotate {
+    rotate: -35deg;
+}

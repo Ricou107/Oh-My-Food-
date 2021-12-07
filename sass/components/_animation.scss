@@ -1,0 +1,44 @@
+.button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+    background-image: linear-gradient(lighten($colour-secondary, 10%), lighten($colour-primary, 10%));
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+  .button:hover::before {
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+.main-menu__dishes__header div:hover i:last-child {
+    color: $colour-primary;
+    animation: progress-bar 500ms;
+    animation-fill-mode: none;
+}
+
+@keyframes progress-bar {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    17% {
+        transform: scale(.18);
+    }
+    24% {
+        transform: scale(.4);
+    }
+    46% {
+        transform: scale(.81);
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}
+
