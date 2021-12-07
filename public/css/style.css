@@ -50,6 +50,10 @@ h5 {
   cursor: pointer;
 }
 
+li a {
+  color: white;
+}
+
 .button {
   font-weight: 400;
   font-size: 18px;
@@ -91,6 +95,12 @@ h5 {
   animation-fill-mode: none;
 }
 
+.restaurant-card__infos div:last-child:hover i:last-child {
+  color: #9356DC;
+  animation: progress-bar 500ms;
+  animation-fill-mode: none;
+}
+
 @keyframes progress-bar {
   0% {
     transform: scale(0);
@@ -110,6 +120,76 @@ h5 {
     opacity: 1;
   }
 }
+.infos, .restaurants, .functions {
+  animation: loader 2s;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.spinner {
+  animation: spin 2s forwards;
+}
+
+@keyframes spin {
+  0% {
+    opacity: 1;
+    rotate: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    rotate: 600deg;
+  }
+}
+.animate {
+  animation-duration: 500ms;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate.pop {
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+.delay-1 {
+  animation-delay: 1s;
+}
+
+.delay-2 {
+  animation-delay: 2s;
+}
+
 header {
   display: flex;
   width: 100%;
@@ -240,10 +320,21 @@ header {
 .restaurant-card__infos i {
   font-size: 25px;
 }
-.restaurant-card__infos i:last-child {
+.restaurant-card__infos div:last-child {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.restaurant-card__infos div:last-child i:first-child {
+  color: black;
   position: absolute;
-  right: 18px;
-  z-index: 2;
+  right: 0;
+  z-index: 1;
+}
+.restaurant-card__infos div:last-child i:last-child {
+  color: transparent;
+  transform-origin: 50% 50%;
+  overflow: hidden;
 }
 .restaurant-card__new {
   position: absolute;
@@ -279,6 +370,20 @@ header {
 
 .rotate {
   rotate: -35deg;
+}
+
+.spinner {
+  position: absolute;
+  top: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.spinner i {
+  font-size: 100px;
+  color: #9356DC;
 }
 
 .main-menu {

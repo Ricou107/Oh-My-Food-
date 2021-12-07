@@ -33,10 +33,21 @@
         & i {
             font-size : 25px;
         }
-        & i:last-child {
+        & div:last-child {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        & div:last-child i:first-child {
+            color: black;
             position: absolute;
-            right : 18px;
-            z-index: 2;
+            right: 0;
+            z-index: 1;
+        }
+        & div:last-child i:last-child {
+            color: transparent;
+            transform-origin: 50% 50%;
+            overflow: hidden;
         }
     }
     &__new {

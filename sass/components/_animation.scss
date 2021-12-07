@@ -16,7 +16,17 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
+
+
+
+
 .main-menu__dishes__header div:hover i:last-child {
+    color: $colour-primary;
+    animation: progress-bar 500ms;
+    animation-fill-mode: none;
+}
+
+.restaurant-card__infos div:last-child:hover i:last-child {
     color: $colour-primary;
     animation: progress-bar 500ms;
     animation-fill-mode: none;
@@ -42,3 +52,80 @@
     }
 }
 
+.infos, .restaurants, .functions {
+    animation: loader 2s;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.spinner {
+    animation : spin 2s forwards;
+}
+
+@keyframes spin {
+    0% {
+        opacity: 1;
+        rotate: 0;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        rotate: 600deg;
+    }
+}
+
+
+.animate {
+    animation-duration: 500ms;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+      
+  @keyframes animate-fade {
+      0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  
+  .animate.pop {
+    animation-name: animate-pop;
+    animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+  }
+  
+  @keyframes animate-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
+          
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+  
+  
+  .delay-1 {
+    animation-delay: 1s;
+  }
+      
+  .delay-2 {
+    animation-delay: 2s;
+  }
+      
+ 
