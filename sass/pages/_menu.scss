@@ -53,18 +53,45 @@
                 @include bordershadows;
                 border-radius: 15px;
                 margin-bottom: 15px;
+                transition-property: padding-right;
+                transition-duration: 1s;
                 & h4:first-child {
                     margin-bottom: 5px;
+                    overflow: visible;
+                    white-space: nowrap;
                 }
-                & h4:last-child {
+                & h4:nth-child(3) {
                     position: absolute;
                     right: 20px;
                     bottom : 12px;
+                    transition-property: right;
+                    transition-duration: 1s;
                 }
                 & h5 {
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                }
+                & div {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 0px;
+                    background-color: $colour-tertiary;
+                    border-radius: 0 15px 15px 0;
+                    transition-property: width, height, top;
+                    transition-duration: 1s;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    & i {
+                        color: white;
+                        font-size: 25px;
+                        opacity: 0;
+                        transition-property: opacity;
+                        transition-duration: 2s;
+                    }
                 }
             }
         }

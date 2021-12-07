@@ -190,6 +190,32 @@ li a {
   animation-delay: 2s;
 }
 
+.main-menu__dishes__step__dish:hover {
+  padding-right: 110px;
+}
+.main-menu__dishes__step__dish:hover h4:nth-child(3) {
+  right: 70px;
+  animation-delay: 0s;
+}
+.main-menu__dishes__step__dish:hover div {
+  width: 60px;
+  height: 100%;
+}
+.main-menu__dishes__step__dish:hover div i {
+  animation: check 1s forwards;
+}
+
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   display: flex;
   width: 100%;
@@ -444,19 +470,46 @@ header {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 15px;
   margin-bottom: 15px;
+  transition-property: padding-right;
+  transition-duration: 1s;
 }
 .main-menu__dishes__step__dish h4:first-child {
   margin-bottom: 5px;
+  overflow: visible;
+  white-space: nowrap;
 }
-.main-menu__dishes__step__dish h4:last-child {
+.main-menu__dishes__step__dish h4:nth-child(3) {
   position: absolute;
   right: 20px;
   bottom: 12px;
+  transition-property: right;
+  transition-duration: 1s;
 }
 .main-menu__dishes__step__dish h5 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.main-menu__dishes__step__dish div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  transition-property: width, height, top;
+  transition-duration: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-menu__dishes__step__dish div i {
+  color: white;
+  font-size: 25px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 2s;
 }
 .main-menu__dishes__step > p {
   text-transform: uppercase;
