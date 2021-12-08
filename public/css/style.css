@@ -142,14 +142,14 @@ li a {
 @keyframes spin {
   0% {
     opacity: 1;
-    rotate: 0;
+    transform: rotate(0deg);
   }
   99% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    rotate: 600deg;
+    transform: rotate(600deg);
   }
 }
 .animate {
@@ -187,7 +187,7 @@ li a {
 }
 
 .delay-2 {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 .main-menu__dishes__step__dish:hover {
@@ -503,6 +503,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .main-menu__dishes__step__dish div i {
   color: white;
@@ -510,6 +511,7 @@ header {
   opacity: 0;
   transition-property: opacity;
   transition-duration: 2s;
+  overflow: hidden;
 }
 .main-menu__dishes__step > p {
   text-transform: uppercase;

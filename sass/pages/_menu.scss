@@ -85,12 +85,14 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    overflow: hidden;
                     & i {
                         color: white;
                         font-size: 25px;
                         opacity: 0;
                         transition-property: opacity;
                         transition-duration: 2s;
+                        overflow: hidden;
                     }
                 }
             }
