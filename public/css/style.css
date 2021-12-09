@@ -121,7 +121,7 @@ li a {
   }
 }
 .infos, .restaurants, .functions {
-  animation: loader 2s;
+  animation: loader 500ms;
 }
 
 @keyframes loader {
@@ -136,7 +136,7 @@ li a {
   }
 }
 .spinner {
-  animation: spin 2s forwards;
+  animation: spin 500ms forwards;
 }
 
 @keyframes spin {
@@ -227,7 +227,6 @@ header {
 .header__arrow {
   position: absolute;
   left: 30px;
-  size: 0.25em;
 }
 .header__arrow--disable {
   display: none;
@@ -285,6 +284,7 @@ header {
   margin-bottom: 25px;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 500px;
 }
 .functions__list p:first-child {
   color: white;
@@ -312,9 +312,24 @@ header {
 .restaurants {
   background-color: #F6F6F6;
   padding: 50px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .restaurants h1 {
   padding-bottom: 25px;
+}
+.restaurants > div {
+  width: 100%;
+}
+.restaurants a {
+  width: 100%;
+  max-width: 400px;
+}
+@media (min-width: 400px) {
+  .restaurants a {
+    padding-right: 10px;
+  }
 }
 
 .restaurant-card {
@@ -412,13 +427,35 @@ header {
   color: #9356DC;
 }
 
+.wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.backgroundimg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.backgroundimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
 .main-menu {
   width: 100%;
+  max-width: 800px;
   background-color: #F6F6F6;
 }
 .main-menu img {
   width: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 .main-menu__dishes {
   padding: 0 25px;
@@ -427,6 +464,10 @@ header {
   position: relative;
   top: -60px;
   margin-bottom: -60px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .main-menu__dishes__header {
   font-family: "Shrikhand", sans-serif;
@@ -437,6 +478,7 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 .main-menu__dishes__header div {
   display: flex;
@@ -455,6 +497,13 @@ header {
 }
 .main-menu__dishes__step {
   margin-bottom: 30px;
+  max-width: 350px;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .main-menu__dishes__step {
+    padding-right: 15px;
+  }
 }
 .main-menu__dishes__step__rectangle {
   width: 40px;

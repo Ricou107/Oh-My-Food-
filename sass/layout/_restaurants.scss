@@ -1,9 +1,23 @@
 .restaurants {
     background-color: $background-light-gray;
     padding: 50px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     & h1 {
         padding-bottom: 25px;
     }
+    & > div {
+        width: 100%;
+    }
+    & a {
+        width: 100%;
+        max-width: 400px;
+        @media (min-width : 400px) {
+            padding-right: 10px;
+        }
+    }
+
 }
 
 .restaurant-card {

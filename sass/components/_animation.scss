@@ -53,7 +53,7 @@
 }
 
 .infos, .restaurants, .functions {
-    animation: loader 2s;
+    animation: loader 500ms;
 }
 
 @keyframes loader {
@@ -71,7 +71,7 @@
 
 
 .spinner {
-    animation : spin 2s forwards;
+    animation : spin 500ms forwards;
 }
 
 @keyframes spin {
