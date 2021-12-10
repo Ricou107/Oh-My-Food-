@@ -70,6 +70,7 @@ li a {
   position: relative;
 }
 
+/* Button */
 .button::before {
   position: absolute;
   content: "";
@@ -89,6 +90,7 @@ li a {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* Heart favorite */
 .main-menu__dishes__header div:hover i:last-child {
   color: #9356DC;
   animation: progress-bar 500ms;
@@ -120,6 +122,7 @@ li a {
     opacity: 1;
   }
 }
+/* Loading */
 .infos, .restaurants, .functions {
   animation: loader 500ms;
 }
@@ -152,6 +155,7 @@ li a {
     transform: rotate(600deg);
   }
 }
+/* Dishes */
 .animate {
   animation-duration: 500ms;
   animation-name: animate-fade;
@@ -190,6 +194,7 @@ li a {
   animation-delay: 1.5s;
 }
 
+/* Add to menu */
 .main-menu__dishes__step__dish:hover {
   padding-right: 110px;
 }
@@ -208,12 +213,14 @@ li a {
 @keyframes check {
   0% {
     opacity: 0;
+    transform: rotate(0);
   }
   25% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+    transform: rotate(360deg);
   }
 }
 header {

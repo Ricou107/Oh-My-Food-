@@ -1,3 +1,5 @@
+/* Button */
+
 .button::before {
     position: absolute;
     content: "";
@@ -18,6 +20,7 @@
 
 
 
+/* Heart favorite */
 
 
 .main-menu__dishes__header div:hover i:last-child {
@@ -51,6 +54,9 @@
         opacity: 1;
     }
 }
+
+/* Loading */
+
 
 .infos, .restaurants, .functions {
     animation: loader 500ms;
@@ -88,6 +94,9 @@
         transform: rotate(600deg);
     }
 }
+
+
+/* Dishes */
 
 
 .animate {
@@ -130,6 +139,9 @@
   }
       
  
+ /* Add to menu */
+ 
+
 .main-menu__dishes__step__dish:hover {
     padding-right: 110px;
     & h4:nth-child(3) {
@@ -148,11 +160,13 @@
 @keyframes check {
     0% {
         opacity: 0;
+        transform: rotate(0);
     }
     25% {
         opacity: 0;
     }
     100% {
         opacity: 1;
+        transform: rotate(360deg);
     }
 }
