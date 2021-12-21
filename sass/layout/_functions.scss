@@ -1,42 +1,52 @@
 .functions {
     margin : 50px 25px;
-    &__list:nth-child(2) {
-        margin-top: 35px;
-    }
-    &__list:last-child {
-        margin-bottom: 55px;
+    & h1 {
+        margin-bottom: 25px;
     }
     &__list {
         display: flex;
-        font-weight: 500;
+        flex-direction: column;
         align-items: center;
-        background-color: $background-light-gray;
-        padding: 25px 0;
-        margin-left: 5px;
-        margin-bottom: 25px;
-        border-radius: 25px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        max-width: 500px;
-        & p:first-child {
-            color: white;
-            background-color: $colour-primary;
-            padding: 2px 6px;
-            border-radius: 50%;
-            position: relative;
-            right: 10px;
-            font-weight: 300;
+        @media (min-width : 850px) {
+            flex-direction: row;
+            flex-wrap: wrap;
         }
-        & i {
-            color : $icon-gray;
-            margin-left: 2%;
-            margin-right: 5%;
-            display: inline-block;
-            font-size: 20px;
-        }
-        &--purple {
-            background-color: $colour-primary-light;
+        &__item {
+            display: flex;
+            font-weight: 500;
+            align-items: center;
+            background-color: $background-light-gray;
+            padding: 25px 0;
+            margin-left: 5px;
+            margin-bottom: 25px;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 300px;
+            @media (min-width : 850px) {
+                margin-right: 20px;
+                min-width: 300px;
+            }
+            & p:first-child {
+                color: white;
+                background-color: $colour-primary;
+                padding: 2px 6px;
+                border-radius: 50%;
+                position: relative;
+                right: 10px;
+                font-weight: 300;
+            }
             & i {
-                color : $colour-primary;
+                color : $icon-gray;
+                margin-left: 2%;
+                margin-right: 5%;
+                display: inline-block;
+                font-size: 20px;
+            }
+            &--purple {
+                background-color: $colour-primary-light;
+                & i {
+                    color : $colour-primary;
+                }
             }
         }
     }
