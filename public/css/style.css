@@ -431,7 +431,7 @@ header {
 }
 
 .rotate {
-  rotate: -35deg;
+  transform: rotate(-35deg);
 }
 
 .spinner {
