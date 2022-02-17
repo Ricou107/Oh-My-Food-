@@ -1,5 +1,5 @@
 # OhMyFood
-Project 3 of Openclassrooms course - Web developer
+Project 2 of Openclassrooms course - Web developer
 
 The goal was to create a static website using HTML5 and CSS3 from a sketch, with animations using CSS while using the preprocessor SASS.
 
